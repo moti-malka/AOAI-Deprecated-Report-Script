@@ -16,7 +16,7 @@ git clone https://github.com/moti-malka/AOAI-Deprecated-Report-Script.git
 ```
 pip i requirements.txt
 ```
-3. Open aoai-deprecated-report.py file and add your subscription ids on ```SUB_IDS = []```
+3. Open *aoai-deprecated-report.py* file and add your subscription ids on ```SUB_IDS = []```
 3. Run the script using Python.
 
 ```bash
