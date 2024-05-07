@@ -15,6 +15,9 @@ class Deployment:
 
 deployments = []
 def main():
+    if not SUB_IDS:
+        print("Please add your subscription ids to the SUB_IDS list")
+        return
     for sub_id in SUB_IDS:
         print(f"Checking subscription {sub_id}")
         cognitive_client = CognitiveServicesManagementClient(
