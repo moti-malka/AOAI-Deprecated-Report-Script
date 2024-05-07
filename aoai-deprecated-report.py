@@ -2,6 +2,9 @@ from azure.identity import DefaultAzureCredential
 from azure.mgmt.cognitiveservices import CognitiveServicesManagementClient
 import re
 
+# Add your subscription ids here (for example, sub_ids = ["0000-000-00000-0000000-0000", "11111-1111-1111-11111-1111"])
+SUB_IDS = []
+
 class Deployment:
     def __init__(self, name, model, subscriptionid, resource_group, resource_id):
         self.name = name
@@ -12,9 +15,7 @@ class Deployment:
 
 deployments = []
 def main():
-    sub_ids = []
-    
-    for sub_id in sub_ids:
+    for sub_id in SUB_IDS:
         print(f"Checking subscription {sub_id}")
         cognitive_client = CognitiveServicesManagementClient(
             credential=DefaultAzureCredential(),
